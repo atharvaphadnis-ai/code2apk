@@ -1,0 +1,19 @@
+{
+  "name": "web2app-studio",
+  "version": "1.0.0",
+  "description": "Convert any URL or HTML bundle into an Android APK using a WebView wrapper — 100% local, no API keys.",
+  "main": "backend/server.js",
+  "scripts": {
+    "dev": "node backend/server.js",
+    "start": "node backend/server.js"
+  },
+  "author": "Atharva Phadnis",
+  "license": "MIT",
+  "dependencies": {
+    "archiver": "^7.0.1",
+    "adm-zip": "^0.5.16",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1"
+  }
+}
