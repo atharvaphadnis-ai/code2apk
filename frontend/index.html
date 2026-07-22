@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web2App Studio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">◆</span>
+        <span>Web2App Studio</span>
+      </div>
+      <nav class="actions">
+        <button id="downloadSourceBtn" class="ghost">Download app files</button>
+        <button id="saveFolderBtn" class="ghost">Set save folder</button>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <h1>Turn any website into an Android APK</h1>
+        <p>Paste a URL or drop HTML files. We wrap them in a native WebView and build a signed debug APK — all locally.</p>
+      </section>
+
+      <section class="card">
+        <div class="row">
+          <label>App name</label>
+          <input id="appName" type="text" placeholder="My Awesome App" value="Web2App" />
+        </div>
+
+        <div class="row">
+          <label>Website URL</label>
+          <input id="url" type="url" placeholder="https://example.com" />
+        </div>
+
+        <div class="row">
+          <label>Custom app icon (optional, PNG)</label>
+          <input id="icon" type="file" accept="image/png" />
+        </div>
+
+        <div id="dropzone" class="dropzone">
+          <p><strong>Drag & drop</strong> HTML files or a .zip bundle here</p>
+          <p class="muted">…or click to browse</p>
+          <input id="fileInput" type="file" multiple hidden />
+          <ul id="fileList"></ul>
+        </div>
+
+        <button id="buildBtn" class="primary">
+          <span class="label">Convert to APK</span>
+          <span class="spinner" hidden></span>
+        </button>
+      </section>
+
+      <section id="logsCard" class="card logs" hidden>
+        <div class="logs-header">
+          <span>Build logs</span>
+          <span id="status" class="pill">idle</span>
+        </div>
+        <pre id="logs"></pre>
+        <div id="result" hidden>
+          <div class="result-info">
+            <div><strong>APK:</strong> <span id="apkName"></span></div>
+            <div><strong>Size:</strong> <span id="apkSize"></span></div>
+          </div>
+          <a id="downloadApk" class="primary" download>Download APK</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">Made by Atharva Phadnis</footer>
+
+    <dialog id="saveFolderDialog">
+      <form method="dialog" id="saveFolderForm">
+        <h3>Set save folder</h3>
+        <p class="muted">Absolute path where uploaded files will be stored. This keeps everything on your machine.</p>
+        <input id="saveFolderInput" type="text" placeholder="/absolute/path/to/folder" required />
+        <div class="dialog-actions">
+          <button value="cancel" class="ghost">Cancel</button>
+          <button id="saveFolderSubmit" value="default" class="primary">Save</button>
+        </div>
+      </form>
+    </dialog>
+
+    <script src="app.js"></script>
+  </body>
+</html>
