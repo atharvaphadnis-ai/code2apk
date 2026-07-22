@@ -70,7 +70,8 @@ web2app-studio/
 
 ## Screenshots
 
-_Add screenshots of the GUI here._
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/c0b3981b-c4c5-4e3a-b18f-a32c5c6c7a2f" />
+
 
 ## License
 
