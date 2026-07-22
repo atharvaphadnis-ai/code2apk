@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+# Minimal Gradle wrapper launcher. Run `gradle wrapper` once locally to
+# populate gradle/wrapper/gradle-wrapper.jar if it isn't already present.
+DIR="$(cd "$(dirname "$0")" && pwd)"
+JAR="$DIR/gradle/wrapper/gradle-wrapper.jar"
+if [ ! -f "$JAR" ]; then
+  echo "gradle-wrapper.jar missing. Run: (cd android-template && gradle wrapper --gradle-version 8.5)" >&2
+  exit 1
+fi
+exec java -classpath "$JAR" org.gradle.wrapper.GradleWrapperMain "$@"
