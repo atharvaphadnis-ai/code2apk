@@ -1,0 +1,19 @@
+{
+  "name": "axiom",
+  "version": "1.0.0",
+  "description": "Axiom — Open-source AI Document Analyzer + Mind Map Generator",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "node server/server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "pdf-parse": "^1.1.1",
+    "tesseract.js": "^5.1.0",
+    "node-fetch": "^2.7.0"
+  },
+  "author": "Atharva Phadnis",
+  "license": "MIT"
+}
